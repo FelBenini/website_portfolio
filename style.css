@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Fredoka+One&display=swap');
+
+*{
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-size: 18px;
+    font-family: 'ABeeZee', sans-serif;
+    line-height: 23px;
+}
+
+h1{
+    font-family: 'Fredoka One', cursive;
+    font-size: 90.44px;
+}
+
+h4{
+    font-family: 'Fredoka One', cursive;
+    font-size: 28.43px;
+}
+
+h2{
+    font-family: 'Fredoka One', cursive;
+    font-size: 50.5px;
+}
+
+h3{
+    font-family: 'Fredoka One', cursive;
+    font-size: 37.9px;
+}
+
+h5{
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 21.33px;
+}
+
+body{
+    background-color: #FAF9F9;
+}
+
+a{
+    color: #303435;
+    text-decoration: transparent;
+    transition: all ease-in 0.1s;
+    padding: 4px;
+}
+
+a:hover{
+    text-decoration: underline #303435;
+}
+
+button{
+    background-color: transparent;
+    width: 160px;
+    height: 48px;
+    border-radius: 8px;
+    color: #0B9670;
+    border: 2px solid #0B9670;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    background-color: transparent;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0B9670;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+button:hover{
+    color: white;
+}
+
+button:hover:before{
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+/*HEADER ------------------------------------------*/
+
+#header_content button h5{
+    margin: auto;
+}
+
+#header_content{
+    display: flex;
+    height: 72px;
+    width: 100%;
+    margin: 0px;
+    margin-right: 64px;
+    justify-content: right;
+    align-items: center;
+}
+
+#about_me_link{
+    scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    align-content: center;
+    width: 100%;
+    height: 72px;
+    background-color: #FAF9F9;
+    box-shadow: 0px 4px 4px #0000000d;
+    position: fixed;
+    z-index: 99;
+}
+
+header :first-child{
+    align-self: center;
+    margin-left: 64px;
+}
+
+/*HERO_SECTION----------------*/
+
+#hero_section{
+    padding-top: 72px;
+    padding-left: 64px;
+    height: calc(97vh - 72px);
+    display: flex;
+    flex-direction: column;
+}
+
+#scroll_down{
+    align-self: center;
+    justify-self: center;
+    color: #494F50;
+    text-align: center;
+    margin-top: -35px;
+}
+
+#scroll_down svg{
+    animation: scroll_down 2s 1s 1;
+    animation-iteration-count: infinite;
+}
+
+#hero_header_titles{
+    height: calc(97vh - 72px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hero_header_titles h1, h2, h4{
+    margin: 25px 0px;
+}
+
+#hero_header_titles h4{
+    border-left: solid 6px #FFC600;
+    border-radius: 2px;
+    padding-left: 8px;
+    color: #494F50;
+}
+
+#hero_header_titles h1{
+    color: #0E0C05;
+}
+#hero_header_titles h1 span{
+    color: #F4BE00;
+}
+
+#hero_header_titles h2{
+    color: #494F50;
+}
+#hero_header_titles h2 span{
+    color: #0CBC8B;
+}
+
+#hero_div{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+#macintosh1{
+    width: 350px;
+}
+#macintosh2{
+    width: 350px;
+    margin-left: -350px;
+    z-index: 96;
+    animation: macintosh_keyframes 2s 2s 1;
+    animation-iteration-count: infinite;
+    -webkit-user-drag: none;
+}
+
+@keyframes macintosh_keyframes {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    51% {opacity: 1;}
+    99% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes scroll_down {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(5px);}
+    100% {transform: translateY(0px);}
+}
+
+/*My skills========================================================*/
+
+#my_skills_section{
+    background-color: #1D3557;
+    padding-left: 64px;
+    padding-top: 64px;
+    margin-top: 100px;
+    padding-bottom: 96px;
+}
+
+#my_skills_section h2, h4{
+    color: #ffffff;
+}
+
+#my_skills_section p{
+    color: #E8EAEE;
+}
+
+#my_skills_section span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 16px;
+}
+
+#my_skills_section span svg{
+    margin-right: 2px;
+}
+
+#my_skills_section .skill_items{
+    margin-left: 32px;
+}
+
+#my_skills_section .my_skills_table{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.my_skills_tr{
+    width: 250px;
+    margin: 0px 64px;
+}
+
+/*About me ===========================================*/
+
+#about_me_section{
+    margin-top: 80px;
+    margin-left: 64px;
+}
+
+#about_me_section #about_me{
+    scroll-behavior: smooth;
+}
+
+#about_me_section h2{
+    color: #0E0C05;
+}
+
+#about_me_section h2 span{
+    color: #FFC600;
+}
+
+#about_me_section #about_me_content_div{
+    display: flex;
+    flex-direction: column;
+}
+
+#about_me_section #about_me_content_div p{
+    width: 550px;
+    margin-bottom: 36px;
+    line-height: 24px;
+    color: #494F50;
+}
+
+#about_me_buttons{
+    display: flex;
+    flex-direction: row;
+    height: 72px;
+    align-items: center;
+}
+
+#about_me_buttons button{
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 18px;
+}
+
+#about_me_buttons #icon{
+    display: block;
+    margin-left: 8%;
+    transition: all ease-in-out 0.15s;
+}
+
+#about_me_buttons #icon:hover{
+    transform: scale(1.1);
+    filter: saturate(100) hue-rotate(-40deg);
+}
+
+/*My Projects=====================================================================================*/
+
+#my_projects_section{
+    margin-top: 80px;
+    padding-top: 64px;
+    background-color: #0CBC8B;
+}
+
+#my_projects_section h3{
+    color: #FAF9F9;
+    text-align: center;
+}
