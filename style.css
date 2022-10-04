@@ -118,10 +118,6 @@ button:hover:before{
     align-items: center;
 }
 
-#about_me_link{
-    scroll-behavior: smooth;
-}
-
 header{
     display: flex;
     align-content: center;
@@ -136,6 +132,7 @@ header{
 header :first-child{
     align-self: center;
     margin-left: 64px;
+    -webkit-user-drag: none;
 }
 
 /*HERO_SECTION----------------*/
@@ -148,15 +145,32 @@ header :first-child{
     flex-direction: column;
 }
 
-#scroll_down{
+.hello_there{
+    transform: translateX(-40px);
+}
+
+.hello_there:nth-child(2){
+    transition-delay: 0.5s;
+}
+
+.hello_there:nth-child(3){
+    transition-delay: 1s;
+}
+
+.hello_there:nth-child(4){
+    transition-delay: 1.5s;
+}
+
+.scroll_down{
     align-self: center;
     justify-self: center;
     color: #494F50;
     text-align: center;
     margin-top: -35px;
+    transform: translateY(-4px);
 }
 
-#scroll_down svg{
+.scroll_down svg{
     animation: scroll_down 2s 1s 1;
     animation-iteration-count: infinite;
 }
@@ -202,6 +216,7 @@ header :first-child{
 
 #macintosh1{
     width: 350px;
+    transform: translateY(30px);
 }
 #macintosh2{
     width: 350px;
@@ -210,6 +225,7 @@ header :first-child{
     animation: macintosh_keyframes 2s 2s 1;
     animation-iteration-count: infinite;
     -webkit-user-drag: none;
+    transform: translateY(30px);
 }
 
 @keyframes macintosh_keyframes {
@@ -263,6 +279,7 @@ header :first-child{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
 }
 
 .my_skills_tr{
@@ -273,32 +290,35 @@ header :first-child{
 /*About me ===========================================*/
 
 #about_me_section{
-    margin-top: 80px;
+    margin-top: 40px;
     margin-left: 64px;
 }
 
-#about_me_section #about_me{
-    scroll-behavior: smooth;
-}
-
-#about_me_section h2{
+#about_me{
     color: #0E0C05;
+    margin-left: 64px;
+    margin-top: 80px;
 }
 
-#about_me_section h2 span{
+#about_me span{
     color: #FFC600;
 }
 
 #about_me_section #about_me_content_div{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 
 #about_me_section #about_me_content_div p{
     width: 550px;
     margin-bottom: 36px;
+    margin-top: 30px;
     line-height: 24px;
     color: #494F50;
+    word-wrap: normal;
 }
 
 #about_me_buttons{
@@ -306,6 +326,7 @@ header :first-child{
     flex-direction: row;
     height: 72px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #about_me_buttons button{
@@ -338,12 +359,11 @@ header :first-child{
 }
 
 #projects_div{
-    display: grid;
-    grid-template-columns: 250px 250px 250px 250px;
-    grid-template-rows: 100px 100px 100px 100px;
-    grid-gap: 40px;
+    display: flex;
+    align-items: center;
+    padding: 72px;
     justify-content: center;
-    margin-top: 48px;
+    flex-wrap: wrap;
 }
 
 .project_card{
@@ -357,6 +377,36 @@ header :first-child{
     align-content: center;
     text-align: center;
     padding: 16px;
+    margin: 8px 16px;
+    padding-top: 24px;
+    transform: translateX(-100%);
+    filter: blur(4px);
+}
+
+.project_card:nth-child(2){
+    transition-delay: 200ms;
+    z-index: 51;
+}
+
+.project_card:nth-child(3){
+    transition-delay: 400ms;
+    z-index: 52;
+}
+
+.project_card:nth-child(4){
+    transition-delay: 600ms;
+    z-index: 53;
+}
+
+.hidden{
+    opacity: 0;
+    transition: all ease-in-out 0.8s;
+}
+
+.not_hidden{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
 }
 
 .project_card p{
@@ -371,6 +421,7 @@ header :first-child{
     font-size: 12px;
     font-family: 'ABeeZee', sans-serif;
     color: #303435;
+    text-decoration: underline #303435;
 }
 
 .project_card img{
@@ -379,6 +430,7 @@ header :first-child{
     width: 90%;
     box-shadow: #32325d40 0px 6px 12px -2px, #0000004d 0px 3px 7px -3px;
     -webkit-user-drag: none;
+    border-radius: 8px;
 }
 
 .project_card span{
@@ -388,20 +440,91 @@ header :first-child{
 }
 
 .project_card span button{
-    width: 40%;
+    width: 100px;
     height: 30px;
 }
 
-.project_card span :last-child{
+.project_card span .github{
     background-color: #0E0C05;
     color: #FAF9F9;
-    padding: 4% 8%;
+    height: fit-content;
+    padding: 8px 24px;
     font-family: 'ABeeZee', sans-serif;
     border-radius: 8px;
     font-size: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-.project_card span :last-child :hover{
+.project_card span .github :hover{
     text-decoration: none;
     background-color: #030301;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    padding: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    box-shadow: inset 2px 0px 4px rgba(0, 0, 0, 0.089);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #aaaaaa;
+    border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/*Responsive web design*/
+
+@media (max-width: 980px) {
+    
+    h1{
+        font-size: 70.44px;
+    }
+
+    h4{
+        font-size: 20.43px;
+    }
+
+    h2{
+        font-size: 40.5px;
+    }
+
+    h3{
+        font-size: 37.9px;
+    }
+
+    h5{
+        font-size: 18.33px;
+    }
+
+    #macintosh1, #macintosh2{
+        width: 300px;
+    }
+    #macintosh2{
+        margin-left: -300px;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    .my_skills_table{
+        flex-wrap: wrap;
+    }
+
+    .my_skills_tr{
+        margin: 0px 32px;
+    }
+
+    #hero_header_titles h1, h2, h4{
+    margin: 20px 0px;
+}
 }
