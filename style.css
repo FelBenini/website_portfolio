@@ -321,6 +321,10 @@ header :first-child{
     word-wrap: normal;
 }
 
+#about_me_section #about_me_content_div a{
+    color: #0B9670;
+}
+
 #about_me_buttons{
     display: flex;
     flex-direction: row;
