@@ -3,7 +3,7 @@ const observer = new IntersectionObserver(function(entries){
         if(entry.isIntersecting) {
             entry.target.classList.add('not_hidden');
         } else {
-            
+            entry.target.classList.remove('not_hidden');
         }
     }) 
 })
